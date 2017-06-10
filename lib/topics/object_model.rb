@@ -2,13 +2,13 @@
 
 # exercise object model
 module ObjectModel
-  #
+  # Independent module for learning about prepend and super
   module LinuxFriendly
     def fork_process
       super
     end
   end
-  #
+  # Parent class with all functionality
   class PersonalComputer
     def fork_process
       fork do
@@ -24,7 +24,7 @@ module ObjectModel
       inspect
     end
   end
-  #
+  # Child class
   class Laptop < PersonalComputer
     prepend LinuxFriendly
   end
